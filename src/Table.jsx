@@ -1,104 +1,14 @@
-function Table({ data, keysSet }) {
+import TableBody from "./TableBody"
+import TableHeader from "./TableHeader"
+
+function Table({ data, obj, i, className }) {
+
     return (
         <>
-        {Array.from(keysSet).map((key, i) => (
-            <table key={i}>
-              <thead>
-                <tr><th>{key}</th></tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item[key].toString()}</td>
-                  </tr>
-                ))}
-              </tbody>
+          <table key={i} className={className}>
+              <TableHeader obj={obj} />
+              <TableBody data={data} obj={obj}/>
             </table>
-          ))}
-          {Array.from(keysSet).map((key, i) => (
-            <table key={i}>
-              <thead>
-                <tr><th>{key}</th></tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item[key].toString()}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ))}
-          {Array.from(keysSet).map((key, i) => (
-            <table key={i}>
-              <thead>
-                <tr><th>{key}</th></tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item[key].toString()}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ))}
-          {Array.from(keysSet).map((key, i) => (
-            <table key={i}>
-              <thead>
-                <tr><th>{key}</th></tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item[key].toString()}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ))}
-          {Array.from(keysSet).map((key, i) => (
-            <table key={i}>
-              <thead>
-                <tr><th>{key}</th></tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item[key].toString()}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ))}
-          {Array.from(keysSet).map((key, i) => (
-            <table key={i}>
-              <thead>
-                <tr><th>{key}</th></tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item[key].toString()}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ))}
-          {Array.from(keysSet).map((key, i) => (
-            <table key={i}>
-              <thead>
-                <tr><th>{key}</th></tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item[key].toString()}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ))}
         </>
     )
 }

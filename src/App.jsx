@@ -8,7 +8,6 @@ function App() {
   const API_URL = "https://jsonplaceholder.typicode.com/todos";
   const [data, setData] = useState([]);
   const [keysSet, setKeysSet] = useState(new Set());
-  
 
   useEffect(() => {
     
@@ -24,7 +23,6 @@ function App() {
           });
         });
         setKeysSet(newKeysSet);
-        console.log(Array.from(newKeysSet))
       }
       catch (err) {
         console.error(err.stack);
@@ -35,8 +33,10 @@ function App() {
   },[]);
 
   return (
-    <div id='tables'>
-      <Table data={data} keysSet={keysSet} />
+    <div className='tables'>
+      {Array.from(keysSet).map((key, i) => (
+        <Table data={data} key={i} obj={key} className={i === 0 ? 'first' : ''} />
+      ))}
     </div>
   )
 }

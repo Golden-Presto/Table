@@ -10,10 +10,19 @@ html {
   overflow-x: scroll;
 }
 
-#tables {
+.tables {
   display: flex;
+  width: 150vw;
 }
 
-td {
+td, th {
   border: 1px solid black;
+  width: 500px;
+}
+
+.first {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: white;
 }
